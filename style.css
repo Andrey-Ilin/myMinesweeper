@@ -1,0 +1,132 @@
+body {
+    background-color: lavender;
+}
+
+table {
+    margin: auto;
+}
+
+img {
+    width: 24px;
+    height: 24px;
+}
+
+label {
+    top: 20px;
+}
+
+.controls {
+    width: 500px;
+    height: 70px;
+    display: block;
+    vertical-align: middle;
+
+}
+
+#container {
+    border: 5px solid blue;
+    border-radius: 30px;
+    padding: 30px;
+    float: left;
+    width: 40%;
+    background-color: white;
+}
+
+#game {
+    float: left;
+    width: 40%;
+    margin-left: 50px;
+    border: 5px solid blue;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    background-color: white;
+}
+
+#field td {
+    height: 50px;
+    width: 40px;
+    border: 1px solid blue;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    transition: 500ms;
+}
+
+#field .close {
+    background: dodgerblue;
+}
+
+#field .open {
+    background: white;
+}
+
+#rows, #columns, #numberOfBombs {
+    width: 310px;
+    height: 30px;
+    border: 2px solid crimson;
+    border-radius: 13px;
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 15px;
+    float: right;
+}
+
+#addFieldForMineField, #cancel {
+    width: 150px;
+    height: 30px;
+    background-color: #c4df9b;
+    color: blueviolet;
+    font-size: 1.1em;
+    border-radius: 13px;
+    margin-right: 15px;
+}
+
+#field {
+    display: none;
+    margin-left: 80px;
+
+}
+
+#counter {
+    display: none;
+}
+
+#forCounter {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 3px solid blue;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+div {
+    display: inline-block;
+}
+
+ul {
+    list-style: decimal;
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+#listOff {
+    color: green;
+}
+
+#listOn {
+    color: green;
+}
+
+#forTests {
+    display: none;
+}
+
+
+
+
