@@ -15,17 +15,19 @@ table.addEventListener('click', openSquare);
 
 function openSquare(event) {
     target = event.target;
-    if (target.tagName != 'TD') {
+
+    var td = target.closest('TD');
+    if (!td) {
         return;
     }
 
-    highlight(target);
+    highlight(td);
 
-    if (isBomb(target)) {
+    if (isBomb(td)) {
         openAllBombs();
         alert('GAME OVER');
     } else {
-        addNumberOfBombsNeighbour(target);
+        addNumberOfBombsNeighbour(td);
     }
 }
 
