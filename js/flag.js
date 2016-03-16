@@ -10,17 +10,20 @@ function putFlag(event) {
     var flag;
 
     target = event.target;
-    if (target.tagName != 'TD') {
+
+    var td = target.closest('TD');
+
+    if (!td) {
         return;
     }
-    if (target.querySelector('[class = "flag"]')) {
-        target.removeChild(target.querySelector('[class = "flag"]'))
+    if (td.querySelector('[class = "flag"]')) {
+        td.removeChild(td.querySelector('[class = "flag"]'))
     } else {
         if (countFlags) {
             flag = new Image();
             flag.src = './img/flag.png';
             flag.className = 'flag';
-            target.appendChild(flag);
+            td.appendChild(flag);
             countFlags--;
         }
     }
