@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Minesweeper tests</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <script>
+        var assert = chai.assert;
+        var expect = chai.expect;
+    </script>
+</head>
+<body>
+<div id="forTests">
+    <h2>Minesweeper</h2>
+
+    <div id="container">
+        <div class="controls">
+            <label for="rows">Number of rows:</label>
+            <input type="text" id="rows" placeholder="10" name="rows" value="10">
+        </div>
+        <div class="controls">
+            <label for="columns">Number of columns:</label>
+            <input type="text" id="columns" placeholder="10" name="columns" value="10">
+        </div>
+        <div class="controls">
+            <label for="numberOfBombs">Number of bombs:</label>
+            <input type="text" id="numberOfBombs" placeholder="10" name="numberOfBombs" value="20">
+        </div>
+
+        <div class="controls">
+            <input type="button" id="addFieldForMineField" value="Add Field">
+            <input type="button" id="cancel" value="Cancel/Clear">
+        </div>
+
+        <div id="rulls">
+            <div id="listOff">▶</div>
+            <div id="listOn">▼</div>
+            <div><b>RULES</b></div>
+            <ul id="hidden">
+                <li>LEFT MOUSE BUTTON OPEN A SQUARE</li>
+                <li>RIGHT MOUSE BUTTON PUT A FLAG</li>
+                <li>YOU HAVE A SAME QUANTITY OF FLAGS AS BOMBS</li>
+                <li>YOU CAN'T ENTER LESS THAN 5 ROWS</li>
+                <li>YOU CAN'T ENTER LESS THAN 5 COLUMNS</li>
+                <li>YOU CAN'T ENTER QUANTITY OF BOMBS LESS THAN 20% QUANTITY OF SQUORES ON THE MINE FIELD</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="game">
+        <h2 id="note">Mine Field</h2>
+        <table id="field"></table>
+        <div id="forCounter" style="display: inline-block">
+            <img src="img/flag.png" id="counter">
+
+            <p id="numberCounter" style="float: right"></p>
+        </div>
+    </div>
+</div>
+
+
+    <script src="js/createFieldForMines.js"></script>
+    <script src="js/addField.js"></script>
+    <script src="js/openClose.js"></script>
+    <script src="js/installBombs.js"></script>
+    <script src="js/cancel.js"></script>
+    <script src="js/flag.js"></script>
+    <script src="js/rules.js"></script>
+    <script src="./js/tests.js"></script>
+    <div id="mocha"></div>
+    <script>
+        mocha.run();
+    </script>
+</body>
+</html>
