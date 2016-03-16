@@ -15,7 +15,7 @@ function createFieldForMaze() {
 
 function makeNotification() {
     alert("Quantity of Rows and Quantity of Columns " +
-    "must be more then 4, Number of bomb must be more then " +
+    "must be more than 4, Number of bomb must be more then " +
     "(Rows * Columns) * 0.2");
 }
 
